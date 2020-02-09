@@ -1,0 +1,6 @@
+#!/bin/bash
+PATTERN="${1:-.*\.c}"
+for i in $(ls -1 | grep -P "^${PATTERN}" | grep -P "\.c$"); do
+    COMMAND="gcc "${i%\.c}.c" -o "${i%.c}""
+    echo "$COMMAND" && eval "$COMMAND"
+done
