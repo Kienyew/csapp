@@ -1,0 +1,23 @@
+rSum:
+	pushl	%ebp
+	mrmovl	8(%ebp), %edx	# edx = start
+	mrmovl	12(%ebp), %ecx	# ecx = count
+	rrmovl	%ecx, %ebx		# ebx = count
+	andl	%ebx, %ebx
+	irmovl	$0, %eax
+	jle		.LOOP
+	subl	$16, %esp
+	rrmovl	%esp, %ebp
+	irmovl	$1, %ebx
+	addl	%ebx, %esi
+	rmmovl	%esi, 12(%ebp)
+	subl	%ebx, %ecx
+	rmmovl	%ecx, 8(%ebp)
+	mrmovl	(%edx), %edx
+	call	rSum	
+	addl	%edx, %eax
+	rrmovl	%ebp, %esp
+
+.LOOP:
+	popl %ebp
+	ret
