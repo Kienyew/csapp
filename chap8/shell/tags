@@ -1,0 +1,32 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
+JobContext	shell.c	/^struct JobContext {$/;"	s	file:
+LineParseResult	shell.c	/^struct LineParseResult {$/;"	s	file:
+MAXJOBS	shell.c	/^#define MAXJOBS /;"	d	file:
+MAXLINE	shell.c	/^#define MAXLINE /;"	d	file:
+PS1	shell.c	/^#define PS1 /;"	d	file:
+argc	shell.c	/^    int argc;$/;"	m	struct:LineParseResult	typeref:typename:int	file:
+argv	shell.c	/^    char* argv[];$/;"	m	struct:LineParseResult	typeref:typename:char * []	file:
+background	shell.c	/^    bool background;$/;"	m	struct:LineParseResult	typeref:typename:bool	file:
+builtin	shell.c	/^void builtin(const char* name, const char* argv[]) {$/;"	f	typeref:typename:void
+builtins	shell.c	/^const char* builtins[] = { "quit", "jobs" };$/;"	v	typeref:typename:const char * []
+endjob	shell.c	/^void endjob(struct JobContext* job_ctx) {$/;"	f	typeref:typename:void
+eval	shell.c	/^void eval(const char* cmdline) {$/;"	f	typeref:typename:void
+free	shell.c	/^    bool free;$/;"	m	struct:JobContext	typeref:typename:bool	file:
+is_builtin	shell.c	/^bool is_builtin(const char* name) {$/;"	f	typeref:typename:bool
+jid	shell.c	/^    jid_t jid; \/* job id *\/$/;"	m	struct:JobContext	typeref:typename:jid_t	file:
+jid_counter	shell.c	/^jid_t jid_counter = 0;$/;"	v	typeref:typename:jid_t
+jid_t	shell.c	/^typedef int jid_t;$/;"	t	typeref:typename:int	file:
+jobs	shell.c	/^struct JobContext jobs[MAXJOBS];$/;"	v	typeref:struct:JobContext[]
+main	shell.c	/^int main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+name	shell.c	/^    char* name;$/;"	m	struct:LineParseResult	typeref:typename:char *	file:
+parseline	shell.c	/^void parseline(const char* line, struct LineParseResult* res) {$/;"	f	typeref:typename:void
+pid	shell.c	/^    pid_t pid;$/;"	m	struct:JobContext	typeref:typename:pid_t	file:
+startjob	shell.c	/^struct JobContext* startjob(const char* name, const char* argv[], bool background) {$/;"	f	typeref:struct:JobContext *
+stopped	shell.c	/^    bool stopped;$/;"	m	struct:JobContext	typeref:typename:bool	file:
